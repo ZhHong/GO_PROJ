@@ -2,16 +2,16 @@ package utils
 
 import "time"
 
-func LogInfo(){
-
+func LogInfo(values []string){
+	writeLog(values,"info")
 }
 
-func LogError(){
-
+func LogError(values []string){
+	writeLog(values,"error")
 }
 
-func LogWarning(){
-
+func LogWarning(values []string){
+	writeLog(values,"warning")
 }
 
 func writeLog(values []string ,log_type string) error{
@@ -20,6 +20,9 @@ func writeLog(values []string ,log_type string) error{
 	//timestr := time.Now()
 	//outfile = "."
 	//file,err := os.Create(outfile)
+	//1 find log file if exists
+	//2 if not exists create file
+	//3 write append log
 	return nil
 }
 
